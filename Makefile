@@ -73,7 +73,7 @@ clean: ## Removes temporary gitignored development artifacts
 
 .PHONY: bandit
 bandit: ## Runs `bandit` static code analysis tool for security bugs
-	bandit --recursive . -lll --exclude molecule,node_modules,.venv
+	bandit --recursive . -ll --exclude molecule,node_modules,.venv
 
 # Explaination of the below shell command should it ever break.
 # 1. Set the field separator to ": ##" to parse lines for make targets.

@@ -33,7 +33,7 @@ class PledgeForm(ModelForm):
 
         # 3. The URL of the statement of intent should point to a live page
         try:
-            urlopen(self.cleaned_data['url'])
+            urlopen(self.cleaned_data['url'])  # nosec
         except HTTPError:
             raise ValidationError(
                 'URL must be accessible.'
